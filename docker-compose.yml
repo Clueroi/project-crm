@@ -1,0 +1,20 @@
+
+services:
+  postgres:
+    container_name: nest-crm-pg
+    image: postgres
+    ports:
+      - 5434:5432
+    environment:
+      POSTGRES_USER: docker
+      POSTGRES_PASSWORD: docker
+      POSTGRES_DB: nest-crm
+      PGDATA: /data/postgres
+
+  cache:
+    container_name: nest-crm-cache
+    image: redis
+    ports:
+      - 6379:6379
+    volumes:
+      - ./data/redis:/data
