@@ -1,7 +1,8 @@
 import { Injectable, Inject } from "@nestjs/common"
-import { BotSessionRepository } from "../repositories/bot-session-repository"
-import { BotAnswerRepository } from "../repositories/bot-answer-repository"
-import { BotQuestionRepository } from "../repositories/bot-question-repository"
+import { BotAnswerRepository } from "../../../../core/repositories/bot-answer-repository"
+import { BotQuestionRepository } from "../../../../core/repositories/bot-question-repository"
+import { BotSessionRepository } from "../../../../core/repositories/bot-session-repository"
+
 
 interface GetSessionAnswersInput {
   sessionId: string
