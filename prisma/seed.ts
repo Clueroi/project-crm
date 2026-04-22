@@ -38,6 +38,32 @@ async function main() {
     ],
   })
 
+  await prisma.ticket.createMany({
+    data: [
+      {
+        title: "Problema com acesso ao sistema",
+        description: "Cliente não consegue acessar o sistema, aparece erro 403.",
+        status: "PENDING",
+        priority: "HIGH",
+        phone: "+5511999990001",
+      },
+      {
+        title: "Dúvida sobre faturamento",
+        description: "Cliente quer saber como acessar a segunda via do boleto.",
+        status: "IN_PROGRESS",
+        priority: "MEDIUM",
+        phone: "+5511999990002",
+      },
+      {
+        title: "Solicitação de cancelamento",
+        description: "Cliente deseja cancelar a assinatura do serviço.",
+        status: "RESOLVED",
+        priority: "LOW",
+        phone: "+5511999990003",
+      },
+    ],
+  })
+
   console.log("Seed data inserted successfully!")
 }
 
