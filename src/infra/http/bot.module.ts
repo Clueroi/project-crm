@@ -4,10 +4,10 @@ import { PrismaService } from "../database/prisma.service"
 import { PrismaBotSessionRepository } from "../database/prisma-bot-session-repository"
 import { PrismaBotQuestionRepository } from "../database/prisma-bot-question-repository"
 import { PrismaBotAnswerRepository } from "../database/prisma-bot-answer-repository"
-import { CreateBotSessionUseCase } from "../../core/use-cases/create-bot-session"
-import { HandleBotMessageUseCase } from "../../core/use-cases/handle-bot-message"
-import { CancelBotSessionUseCase } from "../../core/use-cases/cancel-bot-session"
-import { GetSessionAnswersUseCase } from "../../core/use-cases/get-session-answers"
+import { CreateBotSessionUseCase } from "../../domain/bot/application/use-cases/create-bot-session"
+import { HandleBotMessageUseCase } from "../../domain/bot/application/use-cases/handle-bot-message"
+import { CancelBotSessionUseCase } from "../../domain/bot/application/use-cases/cancel-bot-session"
+import { GetSessionAnswersUseCase } from "../../domain/bot/application/use-cases/get-session-answers"
 
 @Module({
   controllers: [BotController],

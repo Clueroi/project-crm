@@ -1,4 +1,4 @@
-import { BotQuestion } from "../entities/bot-question"
+import { BotQuestion } from "../../domain/bot/enterprise/entities/bot-question"
 
 export interface BotQuestionRepository {
   findById(id: string): Promise<BotQuestion | null>

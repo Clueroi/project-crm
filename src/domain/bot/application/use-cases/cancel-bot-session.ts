@@ -1,5 +1,6 @@
 import { Injectable, Inject } from "@nestjs/common"
-import { BotSessionRepository } from "../repositories/bot-session-repository"
+import { BotSessionRepository } from "../../../../core/repositories/bot-session-repository"
+
 
 interface CancelBotSessionInput {
   phone: string

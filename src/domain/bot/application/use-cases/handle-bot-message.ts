@@ -1,8 +1,9 @@
 import { Injectable, Inject } from "@nestjs/common"
-import { BotSessionRepository } from "../repositories/bot-session-repository"
-import { BotQuestionRepository } from "../repositories/bot-question-repository"
-import { BotAnswerRepository } from "../repositories/bot-answer-repository"
-import { BotAnswer } from "../entities/bot-answer"
+import { BotAnswer } from "../../enterprise/entities/bot-answer"
+import { BotAnswerRepository } from "../../../../core/repositories/bot-answer-repository"
+import { BotQuestionRepository } from "../../../../core/repositories/bot-question-repository"
+import { BotSessionRepository } from "../../../../core/repositories/bot-session-repository"
+
 
 interface HandleBotMessageInput {
   phone: string
@@ -58,7 +59,7 @@ export class HandleBotMessageUseCase {
 
     if (currentQuestion.options) {
       const isValidOption = currentQuestion.options.some(
-        (opt) => opt.toLowerCase() === input.message.toLowerCase(),
+        (opt: string) => opt.toLowerCase() === input.message.toLowerCase(),
       )
       if (!isValidOption) {
         return {

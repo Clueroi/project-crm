@@ -1,4 +1,4 @@
-import { BotSession, BotSessionProps } from "../entities/bot-session"
+import { BotSession, BotSessionProps } from "../../domain/bot/enterprise/entities/bot-session"
 import { UniqueEntityId } from "../entities/unique-entity-id"
 
 type PersistenceRaw = {

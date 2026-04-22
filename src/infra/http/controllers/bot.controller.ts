@@ -6,13 +6,13 @@ import {
   Param,
   Logger,
 } from "@nestjs/common"
-import { CreateBotSessionUseCase } from "../../../core/use-cases/create-bot-session"
-import { HandleBotMessageUseCase } from "../../../core/use-cases/handle-bot-message"
-import { CancelBotSessionUseCase } from "../../../core/use-cases/cancel-bot-session"
-import { GetSessionAnswersUseCase } from "../../../core/use-cases/get-session-answers"
 import { HandleMessageDto } from "../dto/handle-message-dto"
 import { StartSessionDto } from "../dto/start-session-dto"
 import { CancelSessionDto } from "../dto/cancel-session-dto"
+import { CancelBotSessionUseCase } from "../../../domain/bot/application/use-cases/cancel-bot-session"
+import { CreateBotSessionUseCase } from "../../../domain/bot/application/use-cases/create-bot-session"
+import { GetSessionAnswersUseCase } from "../../../domain/bot/application/use-cases/get-session-answers"
+import { HandleBotMessageUseCase } from "../../../domain/bot/application/use-cases/handle-bot-message"
 
 @Controller("bot")
 export class BotController {

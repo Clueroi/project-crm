@@ -1,4 +1,4 @@
-import { BotAnswer } from "../entities/bot-answer"
+import { BotAnswer } from "../../domain/bot/enterprise/entities/bot-answer"
 
 export interface BotAnswerRepository {
   findBySessionId(sessionId: string): Promise<BotAnswer[]>
