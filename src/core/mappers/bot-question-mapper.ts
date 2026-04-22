@@ -1,4 +1,4 @@
-import { BotQuestion } from "../entities/bot-question"
+import { BotQuestion } from "../../domain/bot/enterprise/entities/bot-question"
 import { UniqueEntityId } from "../entities/unique-entity-id"
 
 type PersistenceRaw = {

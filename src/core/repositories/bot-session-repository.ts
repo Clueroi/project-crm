@@ -1,4 +1,4 @@
-import { BotSession } from "../entities/bot-session"
+import { BotSession } from "../../domain/bot/enterprise/entities/bot-session"
 
 export interface BotSessionRepository {
   findById(id: string): Promise<BotSession | null>

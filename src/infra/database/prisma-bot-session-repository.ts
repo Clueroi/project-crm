@@ -1,7 +1,7 @@
 import { Injectable } from "@nestjs/common"
 import { PrismaService } from "./prisma.service"
 import { BotSessionRepository } from "../../core/repositories/bot-session-repository"
-import { BotSession } from "../../core/entities/bot-session"
+import { BotSession } from "../../domain/bot/enterprise/entities/bot-session"
 import { BotSessionMapper } from "../../core/mappers/bot-session-mapper"
 
 @Injectable()
